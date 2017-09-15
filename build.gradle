@@ -1,0 +1,62 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    compileSdkVersion = 26
+    buildToolsVersion = "26.0.1"
+
+    butterKnifeVersion = "8.8.1"
+    retrofitVersion = "2.1.0"
+
+    junitVersion = "4.12"
+    hamcrestVersion = "1.3"
+    runnerVersion = "0.5"
+    rulesVersion = "0.5"
+    mockitoVersion = "1.10.19"
+    powerMockVersion = "1.6.4"
+    robolectricVersion = "3.2.1"
+    espressoVersion = "2.2.2"
+
+    dependencies = [
+        "butterknife"              : "com.jakewharton:butterknife:${butterKnifeVersion}",
+        "butterknife-compiler"     : "com.jakewharton:butterknife-compiler:${butterKnifeVersion}",
+
+        "retrofit"                 : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+        "retrofit-converter"       : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+        "retrofit-adapter"         : "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}",
+
+        // Dependencies for local unit tests
+        "junit"                    : "junit:junit:${junitVersion}",
+        "mockito-core"             : "org.mockito:mockito-core:${mockitoVersion}",
+        "hamcrest-core"            : "org.hamcrest:hamcrest-core:${hamcrestVersion}",
+        "hamcrest-library"         : "org.hamcrest:hamcrest-library:${hamcrestVersion}",
+        "powermock-api-mockito"    : "org.powermock:powermock-api-mockito:${powerMockVersion}",
+        "powermock-module-junit4"  : "org.powermock:powermock-module-junit4:${powerMockVersion}",
+        "espresso-core"            : "com.android.support.test.espresso:espresso-core:${espressoVersion}",
+        "support-test-runner"      : "com.android.support.test:runner:${runnerVersion}",
+        "support-test-rules"       : "com.android.support.test:rules:${rulesVersion}",
+
+    ]
+
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">KeepFit</string>
+
+    <string name="account_profile">个人中心</string>
+    <string name="history">历史记录</string>
+    <string name="myfavor">粉丝</string>
+    <string name="shopping_list">购物清单</string>
+    <string name="permission">权限访问</string>
+    <string name="help">帮助</string>
+    <string name="about_app">关于KeepFit</string>
+    <string name="settings">设置</string>
+
+    <string name="navigation_drawer_open">打开导航栏</string>
+    <string name="navigation_drawer_close">关闭导航栏</string>
+
+</resources>
