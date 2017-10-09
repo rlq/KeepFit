@@ -12,6 +12,12 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nick_name">nick：%s</string>
+    <string name="nick_sign">I am a flower.</string>
 
+    <string name="page0">KeepFit</string>
+    <string name="page1">Register</string>
+    <string name="page2">Friends</string>
+    <string name="page3">Shop</string>
 
 </resources>

@@ -14,7 +14,7 @@ public class Observation<T> implements Register {
     private Observer<T> observer;
 
     public static <T> Observation<T> create(@NonNull Observable<T> observable, @NonNull Observer<T> observer) {
-        return new Observation<>().set(observable, observer);
+        return new Observation<T>().set(observable, observer);
     }
 
     private Observation<T> set(@NonNull Observable<T> observable, @NonNull Observer<T> observer) {

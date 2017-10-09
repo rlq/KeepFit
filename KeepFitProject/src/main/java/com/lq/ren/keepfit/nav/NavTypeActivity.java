@@ -17,7 +17,7 @@ public class NavTypeActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nav_fragment);
+        setContentView(R.layout.fragment_nav);
 
         if (savedInstanceState == null) {
             NavType type = (NavType) getIntent().getExtras().getSerializable(UIActive.NAV_TYPE);
