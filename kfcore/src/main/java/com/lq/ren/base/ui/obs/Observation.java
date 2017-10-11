@@ -32,6 +32,8 @@ public class Observation<T> implements Register {
 
     @Override
     public void clear() {
-
+        this.observable.deleteObservers();
+        this.observable = null;
+        this.observer = null;
     }
 }

@@ -5,14 +5,13 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.lq.ren.keepfit.find.FriendFragment;
-import com.lq.ren.keepfit.motion.WorkingFragment;
+import com.lq.ren.keepfit.motion.FitnessFragment;
 import com.lq.ren.keepfit.read.SubsFragment;
 import com.lq.ren.keepfit.shop.AssetsFragment;
 import com.lq.ren.keepfit.utils.IndicatorView;
@@ -45,13 +44,14 @@ public class MainFragment extends Fragment {
         ButterKnife.bind(this, view);
 
         mainViewPager.setAdapter(new MainAdapter(getChildFragmentManager()));
+        mainViewPager.setCurrentItem(0);
+        mainIndicator.setIndicatorView();
         mainIndicator.setOnIndicatorClick(new IndicatorView.IndicatorClickListener() {
             @Override
             public void onIndicatorClick(int pageIndex) {
                 mainViewPager.setCurrentItem(pageIndex);
             }
         });
-        mainViewPager.setCurrentItem(0);
     }
 
 
@@ -62,7 +62,7 @@ public class MainFragment extends Fragment {
         private MainAdapter(FragmentManager fm) {
             super(fm);
             fragments = new Fragment[]{
-                    new WorkingFragment(),
+                    new FitnessFragment(),
                     new FriendFragment(),
                     new SubsFragment(),
                     new AssetsFragment()
