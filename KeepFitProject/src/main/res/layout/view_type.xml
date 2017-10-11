@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/type_view"
     android:layout_width="241dp"
     android:layout_height="match_parent" >
 
@@ -9,21 +10,18 @@
         android:layout_width="240dp"
         android:layout_height="180dp"/>
 
-    <Button
+    <TextView
         android:id="@+id/go_fit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="240dp"
+        android:layout_height="25dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:gravity="center"
-        android:minHeight="20dp"
-        android:minWidth="115dp"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textAllCaps="false"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/bg_go_fit"/>
+        android:layout_marginBottom="5dp"/>
 
 </RelativeLayout>

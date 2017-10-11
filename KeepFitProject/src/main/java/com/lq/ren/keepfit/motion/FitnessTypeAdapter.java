@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.lq.ren.base.asset.FitnessType;
 import com.lq.ren.keepfit.R;
@@ -34,7 +35,6 @@ public class FitnessTypeAdapter extends RecyclerView.Adapter {
     }
 
     void setTypeData(List<FitnessType> types) {
-        Log.w("HEHE", "fitness adapter setTypeData");
         fitnessTypes.clear();
         fitnessTypes.addAll(types);
         notifyDataSetChanged();
@@ -44,10 +44,9 @@ public class FitnessTypeAdapter extends RecyclerView.Adapter {
     public FitnessTypeViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.view_type, parent, false);
         final FitnessTypeViewHolder holder = new FitnessTypeViewHolder(view);
-        holder.go.setOnClickListener(new View.OnClickListener() {
+        holder.typeView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.e("HEHE", "onclick :" + view.getTag());
                 listener.onClickType(fitnessTypes.get((int) view.getTag()));
             }
         });
@@ -56,8 +55,7 @@ public class FitnessTypeAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        Log.w("HEHE", "fitness adapter :" + fitnessTypes.get(position));
-        ((FitnessTypeViewHolder) holder).go.setTag(position);
+        ((FitnessTypeViewHolder) holder).typeView.setTag(position);
         ((FitnessTypeViewHolder) holder).go.setText(ResTransUtil.mapFitnessType(fitnessTypes.get(position)));
         ((FitnessTypeViewHolder) holder).typeImage.setBackground(context.getResources().getDrawable(
                 ResTransUtil.mapFitnessTypeImage(fitnessTypes.get(position))));
@@ -71,11 +69,13 @@ public class FitnessTypeAdapter extends RecyclerView.Adapter {
 
     class FitnessTypeViewHolder extends RecyclerView.ViewHolder {
 
+        private View typeView;
         private ImageView typeImage;
-        private Button go;
+        private TextView go;
 
         public FitnessTypeViewHolder(View itemView) {
             super(itemView);
+            typeView = itemView.findViewById(R.id.type_view);
             typeImage = itemView.findViewById(R.id.type_image);
             go = itemView.findViewById(R.id.go_fit);
         }

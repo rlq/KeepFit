@@ -39,9 +39,9 @@ public class ResTransUtil {
             case OutDoorWaking:
                 return R.drawable.bg_walk;
             case Riding:
-                return R.drawable.bg_bicycle;
+                return R.drawable.bg_ride;
             case IndoorRunning:
-                return R.drawable.bg_run;
+                return R.drawable.bg_indoor_run;
             case Dumbbell:
                 return R.drawable.bg_dumbbell;
             case Training:
