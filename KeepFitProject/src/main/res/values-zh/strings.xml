@@ -19,4 +19,6 @@
     <string name="page1">订阅</string>
     <string name="page2">发现</string>
     <string name="page3">商店</string>
+
+    <string name="target_des">目标%s步</string>
 </resources>

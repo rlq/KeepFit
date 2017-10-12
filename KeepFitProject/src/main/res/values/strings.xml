@@ -20,4 +20,5 @@
     <string name="page2">Friends</string>
     <string name="page3">Shop</string>
 
+    <string name="target_des">target %sstep</string>
 </resources>

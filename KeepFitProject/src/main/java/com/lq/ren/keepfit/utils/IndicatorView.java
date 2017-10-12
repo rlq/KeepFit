@@ -3,7 +3,6 @@ package com.lq.ren.keepfit.utils;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -36,7 +35,7 @@ public class IndicatorView extends LinearLayout {
         super(context, attrs);
     }
 
-    public void setIndicatorView() {
+    public void setIndicatorView(int curIndex) {
         if (getChildCount() != SIZE) {
             if (getChildCount() != 0) {
                 removeAllViews();
@@ -46,32 +45,23 @@ public class IndicatorView extends LinearLayout {
             indicatorTextSize = getResources().getDimensionPixelSize(R.dimen.indicator_text_size);
             init(SIZE);
         }
-        lastClickView = (ImageView) getChildAt(0);
-        lastClickView.setColorFilter(getResources().getColor(R.color.indicator_selected_color));
 
         for (int i = 0; i < getChildCount(); i++) {
             ImageView view = (ImageView) getChildAt(i);
-            LayoutParams params = new LayoutParams(indicatorIconSize, indicatorIconSize);
-            params.gravity = Gravity.CENTER_VERTICAL;
-            params.leftMargin = gapSize;
-            params.rightMargin = gapSize;
-
-            view.setLayoutParams(params);
             view.setImageResource(iconIds[i]);
             view.setId(i);
+            if (curIndex == i) {
+                setSelected(view);
+            }
 
             view.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     int index = view.getId();
-                    if (lastClickView.equals(view) || lastClickView.getId() == index) {
+                    if (lastClickView.getId() == index) {
                         return;
                     }
-                    ((ImageView) view).setColorFilter(getResources().getColor(R.color.indicator_selected_color));
-                    lastClickView.setColorFilter(getResources().getColor(R.color.indicator_unselected_color));
-
                     listener.onIndicatorClick(index);
-                    lastClickView = (ImageView) view;
                 }
             });
         }
@@ -80,14 +70,21 @@ public class IndicatorView extends LinearLayout {
     @SuppressLint("InflateParams")
     private void init(int size) {
         this.setOrientation(HORIZONTAL);
-        this.setGravity(Gravity.CENTER_HORIZONTAL);
         removeAllViews();
 
         for (int i = 0; i < size; i++) {
             LayoutParams params = new LayoutParams(indicatorIconSize, indicatorIconSize);
-            params.setMargins(gapSize, 0, 0, 0);
+            params.setMargins(2 * gapSize, 0, 0, 0);
             addView(new ImageView(getContext()), params);
         }
+    }
+
+    private void setSelected(ImageView view) {
+        view.setColorFilter(getResources().getColor(R.color.indicator_selected_color));
+        if (lastClickView != null) {
+            lastClickView.setColorFilter(getResources().getColor(R.color.indicator_unselected_color));
+        }
+        lastClickView = view;
     }
 
     public void setOnIndicatorClick(IndicatorClickListener listener) {

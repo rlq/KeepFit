@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fit_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="@android:color/darker_gray">
+
+    <TextView
+        android:id="@+id/exercise_time"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="18:00-19:00"
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/type_name"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="自由训练"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:paddingLeft="25dp"
+        android:layout_toRightOf="@+id/exercise_time"/>
+
+    <TextView
+        android:id="@+id/target_rate"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="完成目标 90%"
+        android:textColor="@android:color/black"
+        android:gravity="center|right"
+        android:paddingRight="10dp"
+        android:layout_toRightOf="@+id/type_name"/>
+
+</RelativeLayout>

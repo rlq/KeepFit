@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.lq.ren.base.asset.FitnessType;
+import com.lq.ren.base.data.Summary;
 import com.lq.ren.base.ui.BaseFragment;
 import com.lq.ren.base.ui.BaseView;
 import com.lq.ren.base.ui.BaseViewModel;
@@ -37,13 +38,9 @@ public class FitnessFragment extends BaseFragment implements BaseView<FitnessMod
     RecyclerView typeRecyclerView;
 
     @BindView(R.id.health_today)
-    HealthProgressView healthProgressView;
-
-    @BindView(R.id.sport_today)
-    RecyclerView sportRecyclerView;
+    TodayHealthView todayhealthView;
 
     private FitnessTypeAdapter typeAdapter;
-
 
     @Nullable
     @Override
@@ -94,6 +91,13 @@ public class FitnessFragment extends BaseFragment implements BaseView<FitnessMod
                 typeAdapter.setTypeData(data);
             }
 
+        });
+
+        Observation.create(viewModel.getSummaryChange(), new Observer<Summary>() {
+            @Override
+            public void update(Observable<Summary> observer, Summary data) {
+                todayhealthView.setHealthView(data);
+            }
         });
     }
 }

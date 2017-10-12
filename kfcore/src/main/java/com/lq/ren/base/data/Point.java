@@ -11,7 +11,9 @@ public class Point {
 
     public String fitId;
     public FitnessType type;
-    public FitnessDataType dataType;
+    public FitnessDataType targetDataType;
+    public float targetValue;
+    public float targetRate;
 
     public long beginTime;
     public long endTime;

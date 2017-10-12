@@ -2,11 +2,9 @@ package com.lq.ren.keepfit.motion;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,9 +14,6 @@ import com.lq.ren.keepfit.utils.ResTransUtil;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * Author lqren on 17/10/11.
@@ -42,7 +37,7 @@ public class FitnessTypeAdapter extends RecyclerView.Adapter {
 
     @Override
     public FitnessTypeViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.view_type, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.view_type_item, parent, false);
         final FitnessTypeViewHolder holder = new FitnessTypeViewHolder(view);
         holder.typeView.setOnClickListener(new View.OnClickListener() {
             @Override
