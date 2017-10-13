@@ -6,9 +6,9 @@
     <TextView
         android:id="@+id/type"
         android:layout_width="wrap_content"
-        android:layout_height="25dp"
+        android:layout_height="@dimen/frag_fit_type"
         android:gravity="center"
-        android:text="运动类型"/>
+        android:text="@string/fit_type_des"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/type_view"

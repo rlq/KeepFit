@@ -6,30 +6,27 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="@dimen/today_health_size"
         android:id="@+id/relativeLayout"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
 
         <ProgressBar
-            android:layout_width="180dp"
-            android:layout_height="180dp"
+            android:layout_width="@dimen/today_health_size"
+            android:layout_height="@dimen/today_health_size"
             android:id="@+id/progressBar"
-            android:max="100"
-            android:progress="80"
             android:progressDrawable="@android:color/holo_blue_dark"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true" />
 
         <TextView
             android:id="@+id/target_des"
-            android:layout_width="180dp"
-            android:layout_height="20dp"
+            android:layout_width="@dimen/today_health_size"
+            android:layout_height="@dimen/today_target_des"
             android:textStyle="bold"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:textColor="@android:color/black"
-            android:layout_alignBaseline="@+id/distance"
-            android:layout_alignBottom="@+id/distance"
+            android:layout_centerVertical="true"
             android:layout_alignEnd="@+id/progressBar" />
 
         <TextView
@@ -38,12 +35,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/progressBar"
-            android:textSize="22sp"
+            android:textSize="@dimen/today_target_font"
             tools:text="0.0km"
             android:textStyle="bold"
             android:textColor="@android:color/black"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="27dp" />
+            android:layout_marginStart="@dimen/today_dis_top"
+            android:layout_marginTop="@dimen/today_target_top" />
 
 
         <TextView
@@ -51,8 +48,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="30step"
-            android:layout_marginTop="20dp"
-            android:textSize="20sp"
+            android:layout_marginTop="@dimen/today_dis_top"
+            android:textSize="@dimen/today_dis_size"
             android:textColor="@android:color/black"
             android:layout_below="@+id/target_value"
             android:layout_alignStart="@+id/target_value" />
@@ -63,32 +60,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="300kcal"
-            android:layout_marginTop="10dp"
-            android:textSize="20sp"
+            android:layout_marginTop="@dimen/today_calorie_top"
+            android:textSize="@dimen/today_dis_size"
             android:textColor="@android:color/black"
             android:layout_below="@+id/distance"
             android:layout_alignStart="@+id/distance" />
 
         <RelativeLayout
             android:id="@+id/target_setting"
-            android:layout_width="200dp"
+            android:layout_width="@dimen/today_health_size"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:visibility="invisible" >
 
             <NumberPicker
                 android:id="@+id/target_picker"
-                android:layout_width="200dp"
+                android:layout_width="@dimen/today_health_size"
                 android:layout_height="wrap_content"
                 android:background="@android:color/darker_gray"/>
 
-            <Button
+            <ImageButton
                 android:id="@+id/target_confirm"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentBottom="true"
-                android:text="ok"/>
+                android:layout_width="@dimen/today_target_top"
+                android:layout_height="@dimen/today_target_top"
+                android:layout_alignRight="@+id/target_picker"
+                android:padding="@dimen/today_calorie_top"
+                android:background="@android:drawable/ic_menu_close_clear_cancel" />
         </RelativeLayout>
 
     </RelativeLayout>

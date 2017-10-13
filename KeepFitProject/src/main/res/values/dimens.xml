@@ -10,6 +10,15 @@
     <dimen name="indicator_text_size">15dp</dimen>
     <dimen name="indicator_selected_current_icons_size">40dp</dimen>
     <dimen name="indicator_icons_gap">20dp</dimen>
+    <dimen name="frag_fit_type">25dp</dimen>
+    <dimen name="frag_indicator_bottom">15dp</dimen>
+    <dimen name="today_health_size">180dp</dimen>
+    <dimen name="today_target_des">20dp</dimen>
+    <dimen name="today_target_font">22sp</dimen>
+    <dimen name="today_dis_top">20dp</dimen>
+    <dimen name="today_dis_size">22sp</dimen>
+    <dimen name="today_calorie_top">10dp</dimen>
+    <dimen name="today_target_top">30dp</dimen>
 
 
 </resources>

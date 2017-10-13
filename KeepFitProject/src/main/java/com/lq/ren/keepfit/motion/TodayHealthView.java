@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.NumberPicker;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -54,7 +55,7 @@ public class TodayHealthView extends RelativeLayout {
     @BindView(R.id.target_picker)
     NumberPicker targetPicker;
     @BindView(R.id.target_confirm)
-    Button targetConfirm;
+    ImageButton targetConfirm;
 
     @BindView(R.id.sport_today)
     RecyclerView todayFitRecycler;

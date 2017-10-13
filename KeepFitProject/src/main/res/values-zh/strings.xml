@@ -21,4 +21,5 @@
     <string name="page3">商店</string>
 
     <string name="target_des">目标%s步</string>
+    <string name="fit_type_des">运动类型</string>
 </resources>
