@@ -60,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="300kcal"
-            android:layout_marginTop="@dimen/today_calorie_top"
+            android:layout_marginTop="@dimen/today_padding_gap"
             android:textSize="@dimen/today_dis_size"
             android:textColor="@android:color/black"
             android:layout_below="@+id/distance"
@@ -84,7 +84,7 @@
                 android:layout_width="@dimen/today_target_top"
                 android:layout_height="@dimen/today_target_top"
                 android:layout_alignRight="@+id/target_picker"
-                android:padding="@dimen/today_calorie_top"
+                android:padding="@dimen/today_padding_gap"
                 android:background="@android:drawable/ic_menu_close_clear_cancel" />
         </RelativeLayout>
 

@@ -3,6 +3,6 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="indicator_unselected_color">#FF000000</color>
-    <color name="indicator_selected_color">#66CC00</color>
+    <color name="fit_unselected_color">#FF000000</color>
+    <color name="fit_selected_color">#66CC00</color>
 </resources>

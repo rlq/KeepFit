@@ -22,4 +22,7 @@
 
     <string name="target_des">目标%s步</string>
     <string name="fit_type_des">运动类型</string>
+    <string name="friend_refer">精选</string>
+    <string name="friend_active">动态</string>
+    <string name="friend_event">活动</string>
 </resources>

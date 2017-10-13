@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/type_view"
-    android:layout_width="241dp"
+    android:layout_width="@dimen/type_view_width"
     android:layout_height="match_parent" >
 
     <ImageView
         android:id="@+id/type_image"
-        android:layout_marginTop="2dp"
-        android:layout_width="240dp"
-        android:layout_height="180dp"/>
+        android:layout_marginTop="@dimen/type_image_top"
+        android:layout_width="@dimen/type_image_width"
+        android:layout_height="@dimen/today_health_size"/>
 
     <TextView
         android:id="@+id/go_fit"
-        android:layout_width="240dp"
-        android:layout_height="25dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:layout_width="@dimen/type_image_width"
+        android:layout_height="@dimen/fit_type"
+        android:paddingLeft="@dimen/today_padding_gap"
+        android:paddingRight="@dimen/today_padding_gap"
         android:gravity="center"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:textSize="@dimen/type_name_font"
         android:textAllCaps="false"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="5dp"/>
+        android:layout_marginBottom="@dimen/type_name_bottom"/>
 
 </RelativeLayout>

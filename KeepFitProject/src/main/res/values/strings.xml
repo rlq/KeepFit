@@ -21,5 +21,8 @@
     <string name="page3">Shop</string>
 
     <string name="target_des">target %sstep</string>
-    <string name="fit_type_des">运动类型</string>
+    <string name="fit_type_des">Fitness Type</string>
+    <string name="friend_refer">Reference</string>
+    <string name="friend_active">Active</string>
+    <string name="friend_event">Event</string>
 </resources>

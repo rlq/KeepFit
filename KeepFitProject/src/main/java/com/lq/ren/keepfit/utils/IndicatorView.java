@@ -40,7 +40,7 @@ public class IndicatorView extends LinearLayout {
             if (getChildCount() != 0) {
                 removeAllViews();
             }
-            indicatorIconSize = getResources().getDimensionPixelSize(R.dimen.indicator_selected_current_icons_size);
+            indicatorIconSize = getResources().getDimensionPixelSize(R.dimen.indicator_icons_size);
             gapSize = getResources().getDimensionPixelSize(R.dimen.indicator_icons_gap);
             indicatorTextSize = getResources().getDimensionPixelSize(R.dimen.indicator_text_size);
             init(SIZE);
@@ -80,9 +80,9 @@ public class IndicatorView extends LinearLayout {
     }
 
     private void setSelected(ImageView view) {
-        view.setColorFilter(getResources().getColor(R.color.indicator_selected_color));
+        view.setColorFilter(getResources().getColor(R.color.fit_selected_color));
         if (lastClickView != null) {
-            lastClickView.setColorFilter(getResources().getColor(R.color.indicator_unselected_color));
+            lastClickView.setColorFilter(getResources().getColor(R.color.fit_unselected_color));
         }
         lastClickView = view;
     }
