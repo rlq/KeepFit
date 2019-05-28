@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Recycle</string>
+
+    <string name="grid_layout_manager">Grid Layout Manager</string>
+    <string name="linear_layout_manager">Linear Layout Manager</string>
+
+    <string name="sample_show_log">Show Log</string>
+    <string name="sample_hide_log">Hide Log</string>
+</resources>

@@ -1,1 +1,1 @@
-include ':KeepFitProject', ':kfcore'
+include ':KeepFitProject', ':kfcore', ':mvvm', ':recycle', ':app'

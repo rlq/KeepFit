@@ -1,7 +1,6 @@
 package com.lq.ren.base.session;
 
-import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.lq.ren.base.data.BaseData;
 import com.lq.ren.base.data.obs.DataObservable;

@@ -1,6 +1,6 @@
 package com.lq.ren.keepfit.nav;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.lq.ren.base.ui.BaseFragment;
 import com.lq.ren.base.ui.BaseView;

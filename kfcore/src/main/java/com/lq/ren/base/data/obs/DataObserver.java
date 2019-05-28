@@ -1,6 +1,6 @@
 package com.lq.ren.base.data.obs;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Author lqren on 17/10/11.

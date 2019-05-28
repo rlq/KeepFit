@@ -1,6 +1,6 @@
 package com.lq.ren.base.ui.obs;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.lq.ren.base.ui.reg.Register;
 

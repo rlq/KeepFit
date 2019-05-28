@@ -1,6 +1,6 @@
 package com.lq.ren.base.data.obs;
 
-import android.support.annotation.CallSuper;
+import androidx.annotation.CallSuper;
 
 import java.util.ArrayList;
 import java.util.List;
