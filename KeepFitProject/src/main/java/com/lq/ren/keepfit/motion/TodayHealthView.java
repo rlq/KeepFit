@@ -121,10 +121,10 @@ public class TodayHealthView extends RelativeLayout {
         targetProgress.setProgress(summary.targetProgressRate);
         targetValue.setText(summary.steps + "步");
 
-        distanceText.setText(String.format(Locale.US, "%.0f", UnitUtils.Distance.m2km(summary.distance)) + " km");
-        calorieText.setText(String.format(Locale.US, "%.0f", summary.calorie) + " kcal");
+        distanceText.setText(String.format(Locale.US, "%.0f", UnitUtils.Distance.m2km(summary.getDistance())) + " km");
+        calorieText.setText(String.format(Locale.US, "%.0f", summary.getCalorie()) + " kcal");
 
-        adapter.setTodayFit(summary.todayExercises);
+        adapter.setTodayFit(summary.getTodayExercises());
     }
 
     class TodayHealthAdapter extends RecyclerView.Adapter<TodayHealthViewHolder> {
@@ -178,10 +178,10 @@ public class TodayHealthView extends RelativeLayout {
         }
 
         void onBindViewHolder(List<Point> todayFitLists, int position) {
-            root.setTag(todayFitLists.get(position).fitId);
-            exerciseTime.setText("" + todayFitLists.get(position).duration);
-            typeName.setText(ResTransUtil.mapFitnessType(todayFitLists.get(position).type));
-            targetRate.setText(String.format(Locale.US, "%.0f%%", todayFitLists.get(position).targetRate));
+            root.setTag(todayFitLists.get(position).getFitId());
+            exerciseTime.setText("" + todayFitLists.get(position).getDuration());
+            typeName.setText(ResTransUtil.mapFitnessType(todayFitLists.get(position).getType()));
+            targetRate.setText(String.format(Locale.US, "%.0f%%", todayFitLists.get(position).getTargetRate()));
         }
     }
 

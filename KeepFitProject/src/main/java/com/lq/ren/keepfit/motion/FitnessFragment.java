@@ -85,7 +85,7 @@ public class FitnessFragment extends BaseFragment implements BaseView<FitnessMod
         if (viewModel == null) {
             return;
         }
-        Observation.create(viewModel.getTypeChange(), new Observer<List<FitnessType>>() {
+        Observation.Companion.create(viewModel.getTypeChange(), new Observer<List<FitnessType>>() {
             @Override
             public void update(Observable<List<FitnessType>> observer, List<FitnessType> data) {
                 typeAdapter.setTypeData(data);
@@ -93,7 +93,7 @@ public class FitnessFragment extends BaseFragment implements BaseView<FitnessMod
 
         });
 
-        Observation.create(viewModel.getSummaryChange(), new Observer<Summary>() {
+        Observation.Companion.create(viewModel.getSummaryChange(), new Observer<Summary>() {
             @Override
             public void update(Observable<Summary> observer, Summary data) {
                 todayhealthView.setHealthView(data);
