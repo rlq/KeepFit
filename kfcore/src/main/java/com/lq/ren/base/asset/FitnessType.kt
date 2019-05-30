@@ -1,10 +1,10 @@
-package com.lq.ren.base.asset;
+package com.lq.ren.base.asset
 
 /**
  * Author lqren on 17/10/11.
  */
 
-public enum FitnessType {
+enum class FitnessType {
     None,
     OutDoorRunning,
     OutDoorWaking,
@@ -13,5 +13,5 @@ public enum FitnessType {
     Training,
     Dumbbell,
     Weighting,
-    Spinning,
+    Spinning
 }
